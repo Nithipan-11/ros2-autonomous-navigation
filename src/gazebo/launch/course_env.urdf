@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<robot name='course'>
+<link name="sim_world"></link>
+
+<joint name="wall_s_joint" type="fixed"><origin xyz="0 -15 1.5"/><parent link="sim_world"/><child link="wall_s"/></joint>
+<link name="wall_s"><visual><geometry><box size="30 0.5 3.0"/></geometry></visual></link>
+
+<joint name="wall_n_joint" type="fixed"><origin xyz="0 15 1.5"/><parent link="sim_world"/><child link="wall_n"/></joint>
+<link name="wall_n"><visual><geometry><box size="30 0.5 3.0"/></geometry></visual></link>
+
+<joint name="wall_e_joint" type="fixed"><origin xyz="15 0 1.5"/><parent link="sim_world"/><child link="wall_e"/></joint>
+<link name="wall_e"><visual><geometry><box size="0.5 30 3.0"/></geometry></visual></link>
+
+<joint name="wall_w_joint" type="fixed"><origin xyz="-15 0 1.5"/><parent link="sim_world"/><child link="wall_w"/></joint>
+<link name="wall_w"><visual><geometry><box size="0.5 30 3.0"/></geometry></visual></link>
+
+<joint name="divider1_joint" type="fixed"><origin xyz="-3 -5 1.5"/><parent link="sim_world"/><child link="divider1"/></joint>
+<link name="divider1"><visual><geometry><box size="24 0.5 3.0"/></geometry></visual></link>
+
+<joint name="divider2_joint" type="fixed"><origin xyz="3 5 1.5"/><parent link="sim_world"/><child link="divider2"/></joint>
+<link name="divider2"><visual><geometry><box size="24 0.5 3.0"/></geometry></visual></link>
+
+<joint name="baffle1_joint" type="fixed"><origin xyz="-6 -12.0 1.5"/><parent link="sim_world"/><child link="baffle1"/></joint>
+<link name="baffle1"><visual><geometry><box size="0.5 5.5 3.0"/></geometry></visual></link>
+
+<joint name="baffle2_joint" type="fixed"><origin xyz="0 -8.0 1.5"/><parent link="sim_world"/><child link="baffle2"/></joint>
+<link name="baffle2"><visual><geometry><box size="0.5 5.5 3.0"/></geometry></visual></link>
+
+<joint name="baffle3_joint" type="fixed"><origin xyz="6 -12.0 1.5"/><parent link="sim_world"/><child link="baffle3"/></joint>
+<link name="baffle3"><visual><geometry><box size="0.5 5.5 3.0"/></geometry></visual></link>
+
+<joint name="chicane_joint" type="fixed"><origin xyz="6 8.0 1.5"/><parent link="sim_world"/><child link="chicane"/></joint>
+<link name="chicane"><visual><geometry><box size="2.0 5.5 3.0"/></geometry></visual></link>
+
+<joint name="gate_lo_joint" type="fixed"><origin xyz="-2 6.625 1.5"/><parent link="sim_world"/><child link="gate_lo"/></joint>
+<link name="gate_lo"><visual><geometry><box size="0.5 2.75 3.0"/></geometry></visual></link>
+
+<joint name="gate_hi_joint" type="fixed"><origin xyz="-2 13.375 1.5"/><parent link="sim_world"/><child link="gate_hi"/></joint>
+<link name="gate_hi"><visual><geometry><box size="0.5 2.75 3.0"/></geometry></visual></link>
+
+<joint name="pillar1_joint" type="fixed"><origin xyz="7.0 0.0 1.5"/><parent link="sim_world"/><child link="pillar1"/></joint>
+<link name="pillar1"><visual><geometry><cylinder radius="0.75" length="3.0"/></geometry></visual></link>
+
+<joint name="pillar2_joint" type="fixed"><origin xyz="1.0 3.0 1.5"/><parent link="sim_world"/><child link="pillar2"/></joint>
+<link name="pillar2"><visual><geometry><cylinder radius="0.75" length="3.0"/></geometry></visual></link>
+
+<joint name="pillar3_joint" type="fixed"><origin xyz="1.0 -3.0 1.5"/><parent link="sim_world"/><child link="pillar3"/></joint>
+<link name="pillar3"><visual><geometry><cylinder radius="0.75" length="3.0"/></geometry></visual></link>
+
+<joint name="pillar4_joint" type="fixed"><origin xyz="-5.0 0.0 1.5"/><parent link="sim_world"/><child link="pillar4"/></joint>
+<link name="pillar4"><visual><geometry><cylinder radius="0.75" length="3.0"/></geometry></visual></link>
+</robot>

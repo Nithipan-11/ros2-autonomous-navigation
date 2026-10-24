@@ -1,3 +1,7 @@
-# map_memory_node:
-#   ros__parameters:
-    
+map_memory_node:
+  ros__parameters:
+    resolution: 0.1           # m per cell
+    size_m: 32.0              # world walls are at +/-15 m
+    frame_id: "sim_world"
+    distance_threshold: 1.5   # m moved before fusing a new costmap
+    update_period_ms: 1000

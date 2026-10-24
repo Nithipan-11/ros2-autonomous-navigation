@@ -15,7 +15,9 @@ from launch_ros.actions import Node
 def generate_launch_description():
     gazebo_pkg_prefix = get_package_share_directory('gazebo')
     gazebo_sim_ign = os.path.join(gazebo_pkg_prefix, 'launch', 'sim.ign')
-    sdf_file_path = os.path.join(gazebo_pkg_prefix, 'launch', 'robot_env.sdf')
+    # World file: 'course_env.sdf' = obstacle course (tools/course/generate_course.py), 'robot_env.sdf' = original
+    world = os.environ.get('WATO_WORLD', 'course_env.sdf')
+    sdf_file_path = os.path.join(gazebo_pkg_prefix, 'launch', world)
     
     gz_sim = ExecuteProcess(cmd=['ign', 'launch', '-v 4', f'{gazebo_sim_ign}'])
     gz_sim_server = ExecuteProcess(cmd=['ign', 'gazebo', '-s', '-v 4', '-r', f'{sdf_file_path}'])

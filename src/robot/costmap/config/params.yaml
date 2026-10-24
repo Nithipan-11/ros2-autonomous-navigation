@@ -1,3 +1,6 @@
-# costmap_node:
-#   ros__parameters:
-
+costmap_node:
+  ros__parameters:
+    resolution: 0.1        # m per cell
+    size_m: 30.0           # local grid is 30 x 30 m centred on the lidar
+    inflation_radius: 2.2  # m (robot's circumscribed radius 1.6 m + margin)
+    max_cost: 100
